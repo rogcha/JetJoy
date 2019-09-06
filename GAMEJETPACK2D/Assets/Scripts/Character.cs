@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
@@ -92,6 +93,7 @@ public class Character : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
+            SceneManager.LoadScene("GAMEOVER");
             isPlaying = false;
             playButton.SetActive(true);
             achButton.SetActive(true);
